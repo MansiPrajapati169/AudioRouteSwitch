@@ -19,6 +19,8 @@
 		B189234F2B91D7C6005C4B39 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189234E2B91D7C6005C4B39 /* Constant.swift */; };
 		B18923512B91E06F005C4B39 /* SpeechHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18923502B91E06F005C4B39 /* SpeechHelper.swift */; };
 		B18923532B91E1B8005C4B39 /* AudioSessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18923522B91E1B8005C4B39 /* AudioSessionHelper.swift */; };
+		B18923572B921CD1005C4B39 /* AudioUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18923552B921CD1005C4B39 /* AudioUserDefault.swift */; };
+		B18923582B921CD1005C4B39 /* AudioUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18923562B921CD1005C4B39 /* AudioUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		B189234E2B91D7C6005C4B39 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B18923502B91E06F005C4B39 /* SpeechHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechHelper.swift; sourceTree = "<group>"; };
 		B18923522B91E1B8005C4B39 /* AudioSessionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionHelper.swift; sourceTree = "<group>"; };
+		B18923552B921CD1005C4B39 /* AudioUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioUserDefault.swift; sourceTree = "<group>"; };
+		B18923562B921CD1005C4B39 /* AudioUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		B189231D2B91CE39005C4B39 /* AudioRouteSwitch */ = {
 			isa = PBXGroup;
 			children = (
+				B18923542B921CD1005C4B39 /* UserDefault */,
 				B189231E2B91CE39005C4B39 /* AppDelegate.swift */,
 				B18923202B91CE39005C4B39 /* SceneDelegate.swift */,
 				B18923222B91CE39005C4B39 /* ViewController.swift */,
@@ -134,6 +139,15 @@
 				B18923412B91CE3A005C4B39 /* AudioRouteSwitchUITestsLaunchTests.swift */,
 			);
 			path = AudioRouteSwitchUITests;
+			sourceTree = "<group>";
+		};
+		B18923542B921CD1005C4B39 /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				B18923552B921CD1005C4B39 /* AudioUserDefault.swift */,
+				B18923562B921CD1005C4B39 /* AudioUserDefaults.swift */,
+			);
+			path = UserDefault;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B18923572B921CD1005C4B39 /* AudioUserDefault.swift in Sources */,
 				B18923232B91CE39005C4B39 /* ViewController.swift in Sources */,
 				B189231F2B91CE39005C4B39 /* AppDelegate.swift in Sources */,
+				B18923582B921CD1005C4B39 /* AudioUserDefaults.swift in Sources */,
 				B18923212B91CE39005C4B39 /* SceneDelegate.swift in Sources */,
 				B18923532B91E1B8005C4B39 /* AudioSessionHelper.swift in Sources */,
 				B18923512B91E06F005C4B39 /* SpeechHelper.swift in Sources */,

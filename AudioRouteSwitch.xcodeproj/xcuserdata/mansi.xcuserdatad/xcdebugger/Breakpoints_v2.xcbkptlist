@@ -7,80 +7,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "15A2FA55-5CCA-47EF-B977-F691E9A351B6"
+            uuid = "580398A0-3645-4F2F-992B-384A95F59BCF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AudioRouteSwitch/ViewController.swift"
+            filePath = "AudioRouteSwitch/SpeechHelper.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "startRecording(_:)"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "cancelRecording()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F46BBA76-4971-46D7-955C-5E35AB470E1A"
+            uuid = "6B30C239-7996-4225-9B8F-3FAAAA8578C8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AudioRouteSwitch/ViewController.swift"
+            filePath = "AudioRouteSwitch/SpeechHelper.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "startRecording(_:)"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "cancelRecording()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F46BBA76-4971-46D7-955C-5E35AB470E1A - f2b59885f6135501"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AudioRouteSwitch.ViewController.startRecording(__C.UIButton) -&gt; ()"
-                  moduleName = "AudioRouteSwitch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mansi/AudioRouteSwitch/AudioRouteSwitch/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "736">
-               </Location>
-               <Location
-                  uuid = "F46BBA76-4971-46D7-955C-5E35AB470E1A - a13d95ffa6683958"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in AudioRouteSwitch.ViewController.startRecording(__C.UIButton) -&gt; ()"
-                  moduleName = "AudioRouteSwitch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mansi/AudioRouteSwitch/AudioRouteSwitch/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  uuid = "F46BBA76-4971-46D7-955C-5E35AB470E1A - a13d95ffa66839b7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in AudioRouteSwitch.ViewController.startRecording(__C.UIButton) -&gt; ()"
-                  moduleName = "AudioRouteSwitch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mansi/AudioRouteSwitch/AudioRouteSwitch/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "128">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABC54641-6E93-488E-98E4-D8F187E7B661"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioRouteSwitch/SpeechHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "startSession()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D39ACBA6-75E7-4166-A981-97774ED369ED"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioRouteSwitch/SpeechHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "cancelRecording()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

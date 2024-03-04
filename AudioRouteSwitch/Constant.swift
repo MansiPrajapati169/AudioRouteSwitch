@@ -16,4 +16,5 @@ struct Constant {
     static let startSpeaking = "Speak something...."
     static let stopRecording = "Stop Recording"
     static let startRecording = "Start Recording"
+    static let transcript = "transcript"
 }

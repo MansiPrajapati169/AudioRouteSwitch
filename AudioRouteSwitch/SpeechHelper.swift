@@ -14,30 +14,31 @@ protocol SpeechRegognitionDelegate: AnyObject {
 class SpeechRegognitionHelper {
     
     // MARK: - Variables
-    private let speechRecognizer = SFSpeechRecognizer(locale:
+    private var speechRecognizer = SFSpeechRecognizer(locale:
                                                         Locale(identifier: Constant.locale))
     private var speechRecognitionRequest:
     SFSpeechAudioBufferRecognitionRequest?
     private var speechRecognitionTask: SFSpeechRecognitionTask?
-    private let audioEngine = AVAudioEngine()
+    private var audioEngine = AVAudioEngine()
     weak var speechRegognitionDelegate: SpeechRegognitionDelegate?
     
     // MARK: - functions
     func startSession() throws {
+        speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: Constant.locale))
         if let recognitionTask = speechRecognitionTask {
             recognitionTask.cancel()
-            self.speechRecognitionTask = nil
         }
-        
+        self.speechRecognitionTask = nil
         setAudioSessionCategory(.playAndRecord)
         speechRecognitionRequest = SFSpeechAudioBufferRecognitionRequest()
         guard let recognitionRequest = speechRecognitionRequest else { return }
-        let inputNode = audioEngine.inputNode
+        engineSetup()
         recognitionRequest.shouldReportPartialResults = true
         speechRecognitionTask = speechRecognizer?.recognitionTask(
             with: recognitionRequest) { [weak self] result, error in
                 guard let self else { return }
                 guard let result else { return }
+                
                 print("Date \(Date())")
                 print("result \(result.bestTranscription.formattedString.lowercased())")
                 DispatchQueue.main.async { [weak self] in
@@ -46,21 +47,50 @@ class SpeechRegognitionHelper {
                 }
                 guard self.audioEngine.isRunning else { return }
                 if error != nil {
-                    self.audioEngine.stop()
-                    inputNode.removeTap(onBus: .zero)
-                    
-                    self.speechRecognitionRequest = nil
-                    self.speechRecognitionTask = nil
+                    cancelRecording()
                 }
             }
-        
-        let recordingFormat = inputNode.outputFormat(forBus: .zero)
-        inputNode.installTap(onBus: .zero, bufferSize: Constant.bufferSize, format: recordingFormat) {
-            (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
-            self.speechRecognitionRequest?.append(buffer)
+    }
+    
+    private func engineSetup() {
+        audioEngine = AVAudioEngine()
+        let input = audioEngine.inputNode
+        let bus = 0
+        let recordingFormat = input.outputFormat(forBus: bus)
+        let outputFormat = AVAudioFormat(commonFormat: .pcmFormatFloat32, sampleRate: AVAudioSession.sharedInstance().sampleRate, channels: 1, interleaved: true)
+        guard let outputFormat, let converter = AVAudioConverter(from: recordingFormat, to: outputFormat)  else {
+            return
+        }
+        input.installTap(onBus: bus, bufferSize: Constant.bufferSize, format: recordingFormat) { [weak self] (buffer, _) -> Void in
+            guard let self else { return }
+            var newBufferAvailable = true
+            let inputCallback: AVAudioConverterInputBlock = { _, outStatus in
+                if newBufferAvailable {
+                    outStatus.pointee = .haveData
+                    newBufferAvailable = false
+                    return buffer
+                } else {
+                    outStatus.pointee = .noDataNow
+                    return nil
+                }
+            }
+            let convertedBuffer = AVAudioPCMBuffer(pcmFormat: outputFormat, frameCapacity: AVAudioFrameCount(outputFormat.sampleRate) * buffer.frameLength / AVAudioFrameCount(buffer.format.sampleRate))!
+            var error: NSError?
+            let status = converter.convert(to: convertedBuffer, error: &error, withInputFrom: inputCallback)
+            if status == .error {
+                if let err = error {
+                    print("Error in starting session \(String(describing: err))")
+                }
+                return
+            }
+            self.speechRecognitionRequest?.append(convertedBuffer)
         }
         audioEngine.prepare()
-        try audioEngine.start()
+        do {
+            try audioEngine.start()
+        } catch {
+            print("Error in starting session")
+        }
     }
     
     func cancelRecording() {
