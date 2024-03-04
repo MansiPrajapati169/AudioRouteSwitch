@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		187FFCD82444E4DAD862B7A0 /* Pods_AudioRouteSwitchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD79D170A7A752B07CD24BD /* Pods_AudioRouteSwitchTests.framework */; };
+		7176B7D9FEF0EB52AB203818 /* Pods_AudioRouteSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7C2E65452CFC5C8745C94A /* Pods_AudioRouteSwitch.framework */; };
+		A9760000462B1928ACB99805 /* Pods_AudioRouteSwitch_AudioRouteSwitchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA54513CF4507CC80B6B026 /* Pods_AudioRouteSwitch_AudioRouteSwitchUITests.framework */; };
+		B12C050C2B95C5770021CC8E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B12C050B2B95C5760021CC8E /* Localizable.strings */; };
+		B12C05112B95CA9C0021CC8E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12C05102B95CA9C0021CC8E /* R.generated.swift */; };
 		B189231F2B91CE39005C4B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189231E2B91CE39005C4B39 /* AppDelegate.swift */; };
 		B18923212B91CE39005C4B39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18923202B91CE39005C4B39 /* SceneDelegate.swift */; };
 		B18923232B91CE39005C4B39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18923222B91CE39005C4B39 /* ViewController.swift */; };
@@ -19,6 +24,8 @@
 		B189234F2B91D7C6005C4B39 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189234E2B91D7C6005C4B39 /* Constant.swift */; };
 		B18923512B91E06F005C4B39 /* SpeechHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18923502B91E06F005C4B39 /* SpeechHelper.swift */; };
 		B18923532B91E1B8005C4B39 /* AudioSessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18923522B91E1B8005C4B39 /* AudioSessionHelper.swift */; };
+		B18923572B921CD1005C4B39 /* AudioUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18923552B921CD1005C4B39 /* AudioUserDefault.swift */; };
+		B18923582B921CD1005C4B39 /* AudioUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18923562B921CD1005C4B39 /* AudioUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18FB0A17FBBCBE21FF035B69 /* Pods-AudioRouteSwitch-AudioRouteSwitchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioRouteSwitch-AudioRouteSwitchUITests.release.xcconfig"; path = "Target Support Files/Pods-AudioRouteSwitch-AudioRouteSwitchUITests/Pods-AudioRouteSwitch-AudioRouteSwitchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1AD79D170A7A752B07CD24BD /* Pods_AudioRouteSwitchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioRouteSwitchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DEA57050A3E06B5A4354009 /* Pods-AudioRouteSwitch-AudioRouteSwitchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioRouteSwitch-AudioRouteSwitchUITests.debug.xcconfig"; path = "Target Support Files/Pods-AudioRouteSwitch-AudioRouteSwitchUITests/Pods-AudioRouteSwitch-AudioRouteSwitchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		85C58FCB6867B8DCF05AC061 /* Pods-AudioRouteSwitchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioRouteSwitchTests.release.xcconfig"; path = "Target Support Files/Pods-AudioRouteSwitchTests/Pods-AudioRouteSwitchTests.release.xcconfig"; sourceTree = "<group>"; };
+		B12C050B2B95C5760021CC8E /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		B12C05102B95CA9C0021CC8E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		B189231B2B91CE39005C4B39 /* AudioRouteSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioRouteSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B189231E2B91CE39005C4B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B18923202B91CE39005C4B39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +68,13 @@
 		B189234E2B91D7C6005C4B39 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B18923502B91E06F005C4B39 /* SpeechHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechHelper.swift; sourceTree = "<group>"; };
 		B18923522B91E1B8005C4B39 /* AudioSessionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionHelper.swift; sourceTree = "<group>"; };
+		B18923552B921CD1005C4B39 /* AudioUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioUserDefault.swift; sourceTree = "<group>"; };
+		B18923562B921CD1005C4B39 /* AudioUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioUserDefaults.swift; sourceTree = "<group>"; };
+		CB8C29E5FE57BEE8DAD03D2E /* Pods-AudioRouteSwitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioRouteSwitch.release.xcconfig"; path = "Target Support Files/Pods-AudioRouteSwitch/Pods-AudioRouteSwitch.release.xcconfig"; sourceTree = "<group>"; };
+		CEA54513CF4507CC80B6B026 /* Pods_AudioRouteSwitch_AudioRouteSwitchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioRouteSwitch_AudioRouteSwitchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4DC290FCA97725C0F49B907 /* Pods-AudioRouteSwitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioRouteSwitch.debug.xcconfig"; path = "Target Support Files/Pods-AudioRouteSwitch/Pods-AudioRouteSwitch.debug.xcconfig"; sourceTree = "<group>"; };
+		DE87B5F47226977B485F5799 /* Pods-AudioRouteSwitchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioRouteSwitchTests.debug.xcconfig"; path = "Target Support Files/Pods-AudioRouteSwitchTests/Pods-AudioRouteSwitchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE7C2E65452CFC5C8745C94A /* Pods_AudioRouteSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioRouteSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7176B7D9FEF0EB52AB203818 /* Pods_AudioRouteSwitch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187FFCD82444E4DAD862B7A0 /* Pods_AudioRouteSwitchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +98,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9760000462B1928ACB99805 /* Pods_AudioRouteSwitch_AudioRouteSwitchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		123951037E0BEB5B0EB72816 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE7C2E65452CFC5C8745C94A /* Pods_AudioRouteSwitch.framework */,
+				CEA54513CF4507CC80B6B026 /* Pods_AudioRouteSwitch_AudioRouteSwitchUITests.framework */,
+				1AD79D170A7A752B07CD24BD /* Pods_AudioRouteSwitchTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6312D9CFA26D643C8B21B13F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4DC290FCA97725C0F49B907 /* Pods-AudioRouteSwitch.debug.xcconfig */,
+				CB8C29E5FE57BEE8DAD03D2E /* Pods-AudioRouteSwitch.release.xcconfig */,
+				5DEA57050A3E06B5A4354009 /* Pods-AudioRouteSwitch-AudioRouteSwitchUITests.debug.xcconfig */,
+				18FB0A17FBBCBE21FF035B69 /* Pods-AudioRouteSwitch-AudioRouteSwitchUITests.release.xcconfig */,
+				DE87B5F47226977B485F5799 /* Pods-AudioRouteSwitchTests.debug.xcconfig */,
+				85C58FCB6867B8DCF05AC061 /* Pods-AudioRouteSwitchTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B18923122B91CE39005C4B39 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +135,8 @@
 				B18923342B91CE3A005C4B39 /* AudioRouteSwitchTests */,
 				B189233E2B91CE3A005C4B39 /* AudioRouteSwitchUITests */,
 				B189231C2B91CE39005C4B39 /* Products */,
+				6312D9CFA26D643C8B21B13F /* Pods */,
+				123951037E0BEB5B0EB72816 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +153,9 @@
 		B189231D2B91CE39005C4B39 /* AudioRouteSwitch */ = {
 			isa = PBXGroup;
 			children = (
+				B18923542B921CD1005C4B39 /* UserDefault */,
+				B12C05102B95CA9C0021CC8E /* R.generated.swift */,
+				B12C050B2B95C5760021CC8E /* Localizable.strings */,
 				B189231E2B91CE39005C4B39 /* AppDelegate.swift */,
 				B18923202B91CE39005C4B39 /* SceneDelegate.swift */,
 				B18923222B91CE39005C4B39 /* ViewController.swift */,
@@ -136,6 +187,15 @@
 			path = AudioRouteSwitchUITests;
 			sourceTree = "<group>";
 		};
+		B18923542B921CD1005C4B39 /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				B18923552B921CD1005C4B39 /* AudioUserDefault.swift */,
+				B18923562B921CD1005C4B39 /* AudioUserDefaults.swift */,
+			);
+			path = UserDefault;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B18923452B91CE3A005C4B39 /* Build configuration list for PBXNativeTarget "AudioRouteSwitch" */;
 			buildPhases = (
+				25FB0CA50AD03C2C3D04A73B /* [CP] Check Pods Manifest.lock */,
+				B12C050D2B95C73C0021CC8E /* ShellScript */,
 				B18923172B91CE39005C4B39 /* Sources */,
 				B18923182B91CE39005C4B39 /* Frameworks */,
 				B18923192B91CE39005C4B39 /* Resources */,
+				360C6591F335173ADF817962 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +223,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B18923482B91CE3A005C4B39 /* Build configuration list for PBXNativeTarget "AudioRouteSwitchTests" */;
 			buildPhases = (
+				26A48E4F83E2A243BAF4E623 /* [CP] Check Pods Manifest.lock */,
 				B189232D2B91CE3A005C4B39 /* Sources */,
 				B189232E2B91CE3A005C4B39 /* Frameworks */,
 				B189232F2B91CE3A005C4B39 /* Resources */,
@@ -178,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B189234B2B91CE3A005C4B39 /* Build configuration list for PBXNativeTarget "AudioRouteSwitchUITests" */;
 			buildPhases = (
+				F63C3ED9D6EE6528CB21D26E /* [CP] Check Pods Manifest.lock */,
 				B18923372B91CE3A005C4B39 /* Sources */,
 				B18923382B91CE3A005C4B39 /* Frameworks */,
 				B18923392B91CE3A005C4B39 /* Resources */,
+				430EF22DAA831A88AE09A3EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B189232B2B91CE3A005C4B39 /* LaunchScreen.storyboard in Resources */,
+				B12C050C2B95C5770021CC8E /* Localizable.strings in Resources */,
 				B18923282B91CE3A005C4B39 /* Assets.xcassets in Resources */,
 				B18923262B91CE39005C4B39 /* Main.storyboard in Resources */,
 			);
@@ -262,13 +329,138 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25FB0CA50AD03C2C3D04A73B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AudioRouteSwitch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26A48E4F83E2A243BAF4E623 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AudioRouteSwitchTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		360C6591F335173ADF817962 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AudioRouteSwitch/Pods-AudioRouteSwitch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AudioRouteSwitch/Pods-AudioRouteSwitch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AudioRouteSwitch/Pods-AudioRouteSwitch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		430EF22DAA831A88AE09A3EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AudioRouteSwitch-AudioRouteSwitchUITests/Pods-AudioRouteSwitch-AudioRouteSwitchUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AudioRouteSwitch-AudioRouteSwitchUITests/Pods-AudioRouteSwitch-AudioRouteSwitchUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AudioRouteSwitch-AudioRouteSwitchUITests/Pods-AudioRouteSwitch-AudioRouteSwitchUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B12C050D2B95C73C0021CC8E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/AudioRouteSwitch/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/AudioRouteSwitch/R.generated.swift\"\n";
+		};
+		F63C3ED9D6EE6528CB21D26E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AudioRouteSwitch-AudioRouteSwitchUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B18923172B91CE39005C4B39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B18923572B921CD1005C4B39 /* AudioUserDefault.swift in Sources */,
 				B18923232B91CE39005C4B39 /* ViewController.swift in Sources */,
+				B12C05112B95CA9C0021CC8E /* R.generated.swift in Sources */,
 				B189231F2B91CE39005C4B39 /* AppDelegate.swift in Sources */,
+				B18923582B921CD1005C4B39 /* AudioUserDefaults.swift in Sources */,
 				B18923212B91CE39005C4B39 /* SceneDelegate.swift in Sources */,
 				B18923532B91E1B8005C4B39 /* AudioSessionHelper.swift in Sources */,
 				B18923512B91E06F005C4B39 /* SpeechHelper.swift in Sources */,
@@ -449,12 +641,14 @@
 		};
 		B18923462B91CE3A005C4B39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4DC290FCA97725C0F49B907 /* Pods-AudioRouteSwitch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K7XJG666ZW;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AudioRouteSwitch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -477,12 +671,14 @@
 		};
 		B18923472B91CE3A005C4B39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB8C29E5FE57BEE8DAD03D2E /* Pods-AudioRouteSwitch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K7XJG666ZW;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AudioRouteSwitch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -505,6 +701,7 @@
 		};
 		B18923492B91CE3A005C4B39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE87B5F47226977B485F5799 /* Pods-AudioRouteSwitchTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -525,6 +722,7 @@
 		};
 		B189234A2B91CE3A005C4B39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85C58FCB6867B8DCF05AC061 /* Pods-AudioRouteSwitchTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -545,6 +743,7 @@
 		};
 		B189234C2B91CE3A005C4B39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DEA57050A3E06B5A4354009 /* Pods-AudioRouteSwitch-AudioRouteSwitchUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -563,6 +762,7 @@
 		};
 		B189234D2B91CE3A005C4B39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18FB0A17FBBCBE21FF035B69 /* Pods-AudioRouteSwitch-AudioRouteSwitchUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

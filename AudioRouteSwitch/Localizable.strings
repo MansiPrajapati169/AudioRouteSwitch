@@ -1,0 +1,9 @@
+//
+//  SceneDelegate.swift
+//  AudioRouteSwitch
+//
+//  Created by Mansi Prajapati on 04/03/24.
+//
+
+"transcriptString" = "%@ %@";
+"emptyString" = "";
