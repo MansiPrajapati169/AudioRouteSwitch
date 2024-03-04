@@ -9,7 +9,7 @@ import UIKit
 import AVFAudio
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var btnStartStopRecord: UIButton!
     @IBOutlet weak var lblTranscript: UILabel!
     @IBOutlet weak var transcriptView: UIView!
@@ -39,35 +39,35 @@ class ViewController: UIViewController {
     }
     
     @objc func handleRouteChange(notification: Notification) {
-            guard let userInfo = notification.userInfo,
-                  let reasonValue = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt,
-                  let reason = AVAudioSession.RouteChangeReason(rawValue: reasonValue) else {
-                return
-            }
-            
-            switch reason {
-            case .newDeviceAvailable, .oldDeviceUnavailable:
-                isSessionStarted = false
-                self.speechRecognitionHelper.cancelRecording()
-                self.routeChange = true
-                print("route change:: \(String(describing: lblTranscript.text)) userdefault:: \(String(describing: AudioUserDefault.sharedInstance.transcriptString))")
-                AudioUserDefault.sharedInstance.transcriptString = self.lblTranscript.text
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    do {
-                        try self.speechRecognitionHelper.startSession()
-                        self.isSessionStarted = true
-                        print("session started")
-                    } catch {
-                        print("Error in starting session")
-                    }
+        guard let userInfo = notification.userInfo,
+              let reasonValue = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt,
+              let reason = AVAudioSession.RouteChangeReason(rawValue: reasonValue) else {
+            return
+        }
+        
+        switch reason {
+        case .newDeviceAvailable, .oldDeviceUnavailable:
+            isSessionStarted = false
+            self.speechRecognitionHelper.cancelRecording()
+            self.routeChange = true
+            print("route change:: \(String(describing: lblTranscript.text)) userdefault:: \(String(describing: AudioUserDefault.sharedInstance.transcriptString))")
+            AudioUserDefault.sharedInstance.transcriptString = self.lblTranscript.text
+            DispatchQueue.main.asyncAfter(deadline: .now() + Constant.sessionReset) {
+                do {
+                    try self.speechRecognitionHelper.startSession()
+                    self.isSessionStarted = true
+                    print("session started")
+                } catch {
+                    print("Error in starting session")
                 }
-            default: break
             }
+        default: break
+        }
     }
     
     @IBAction func startRecording(_ sender: UIButton) {
         if startRecording {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Constant.sessionReset) {
                 do {
                     AudioUserDefault.sharedInstance.transcriptString = R.string.localizable.emptyString()
                     try self.speechRecognitionHelper.startSession()

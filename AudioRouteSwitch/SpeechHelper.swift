@@ -14,7 +14,7 @@ protocol SpeechRegognitionDelegate: AnyObject {
 class SpeechRegognitionHelper {
     
     // MARK: - Variables
-    private var speechRecognizer = SFSpeechRecognizer(locale:
+    private let speechRecognizer = SFSpeechRecognizer(locale:
                                                         Locale(identifier: Constant.locale))
     private var speechRecognitionRequest:
     SFSpeechAudioBufferRecognitionRequest?
@@ -24,7 +24,6 @@ class SpeechRegognitionHelper {
     
     // MARK: - functions
     func startSession() throws {
-        speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: Constant.locale))
         if let recognitionTask = speechRecognitionTask {
             recognitionTask.cancel()
         }

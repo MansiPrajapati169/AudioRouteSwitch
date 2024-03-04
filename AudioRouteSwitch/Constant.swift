@@ -17,4 +17,5 @@ struct Constant {
     static let stopRecording = "Stop Recording"
     static let startRecording = "Start Recording"
     static let transcript = "transcript"
+    static let sessionReset = 0.3
 }
