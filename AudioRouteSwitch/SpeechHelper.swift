@@ -28,7 +28,7 @@ class SpeechRegognitionHelper {
             recognitionTask.cancel()
         }
         self.speechRecognitionTask = nil
-        setAudioSessionCategory(.playAndRecord)
+        setAudioSessionCategory(.record)
         speechRecognitionRequest = SFSpeechAudioBufferRecognitionRequest()
         guard let recognitionRequest = speechRecognitionRequest else { return }
         engineSetup()
@@ -37,9 +37,6 @@ class SpeechRegognitionHelper {
             with: recognitionRequest) { [weak self] result, error in
                 guard let self else { return }
                 guard let result else { return }
-                
-                print("Date \(Date())")
-                print("result \(result.bestTranscription.formattedString.lowercased())")
                 DispatchQueue.main.async { [weak self] in
                     guard let self else { return }
                     speechRegognitionDelegate?.speechRecognizing(text: result.bestTranscription.formattedString.lowercased())
@@ -53,14 +50,14 @@ class SpeechRegognitionHelper {
     
     private func engineSetup() {
         audioEngine = AVAudioEngine()
-        let input = audioEngine.inputNode
+        let inputNode = audioEngine.inputNode
         let bus = 0
-        let recordingFormat = input.outputFormat(forBus: bus)
+        let recordingFormat = inputNode.outputFormat(forBus: bus)
         let outputFormat = AVAudioFormat(commonFormat: .pcmFormatFloat32, sampleRate: AVAudioSession.sharedInstance().sampleRate, channels: 1, interleaved: true)
         guard let outputFormat, let converter = AVAudioConverter(from: recordingFormat, to: outputFormat)  else {
             return
         }
-        input.installTap(onBus: bus, bufferSize: Constant.bufferSize, format: recordingFormat) { [weak self] (buffer, _) -> Void in
+        inputNode.installTap(onBus: bus, bufferSize: Constant.bufferSize, format: recordingFormat) { [weak self] (buffer, _) -> Void in
             guard let self else { return }
             var newBufferAvailable = true
             let inputCallback: AVAudioConverterInputBlock = { _, outStatus in

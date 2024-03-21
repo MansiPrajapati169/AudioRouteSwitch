@@ -20,7 +20,7 @@ func isBluetoothDeviceConnected(audioSession: AVAudioSession) -> Bool {
 func setAudioSessionCategory(_ categoery: AVAudioSession.Category) {
     let audioSession = AVAudioSession.sharedInstance()
     do {
-        try? audioSession.setCategory(AVAudioSession.Category.playAndRecord, mode: .default, options: [.allowBluetooth, .defaultToSpeaker])
+        try? audioSession.setCategory(categoery, mode: .default, options: [.allowBluetooth, .defaultToSpeaker])
         if isBluetoothDeviceConnected(audioSession: audioSession) {
             try audioSession.overrideOutputAudioPort(.none)
         } else {

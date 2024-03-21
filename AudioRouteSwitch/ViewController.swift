@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     private var routeChange = false
     private var previousString = R.string.localizable.emptyString()
     private var isSessionStarted = false
+    private var isTextEmpty = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,42 +47,58 @@ class ViewController: UIViewController {
         }
         
         switch reason {
-        case .newDeviceAvailable, .oldDeviceUnavailable:
-            isSessionStarted = false
-            self.speechRecognitionHelper.cancelRecording()
-            self.routeChange = true
-            print("route change:: \(String(describing: lblTranscript.text)) userdefault:: \(String(describing: AudioUserDefault.sharedInstance.transcriptString))")
+        case .newDeviceAvailable:
+            print("Reason: User has plugged in audio device")
+            manageSession()
+        case .oldDeviceUnavailable:
+            print("Reason: Audio device is no longer available")
+           manageSession()
+        default:
+            break
+        }
+    }
+    
+    func manageSession() {
+        isSessionStarted = false
+        self.speechRecognitionHelper.cancelRecording()
+        self.routeChange = true
+        print("route change:: \(String(describing: lblTranscript.text)) userdefault:: \(String(describing: AudioUserDefault.sharedInstance.transcriptString))")
+        if !isTextEmpty {
             AudioUserDefault.sharedInstance.transcriptString = self.lblTranscript.text
-            DispatchQueue.main.asyncAfter(deadline: .now() + Constant.sessionReset) {
-                do {
-                    try self.speechRecognitionHelper.startSession()
-                    self.isSessionStarted = true
-                    print("session started")
-                } catch {
-                    print("Error in starting session")
-                }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constant.sessionReset) {
+            do {
+                try self.speechRecognitionHelper.startSession()
+                self.isSessionStarted = true
+                print("session started")
+            } catch {
+                print("Error in starting session")
             }
-        default: break
         }
     }
     
     @IBAction func startRecording(_ sender: UIButton) {
+        AudioUserDefault.sharedInstance.transcriptString = nil
         if startRecording {
+            isTextEmpty = true
             DispatchQueue.main.asyncAfter(deadline: .now() + Constant.sessionReset) {
                 do {
-                    AudioUserDefault.sharedInstance.transcriptString = R.string.localizable.emptyString()
                     try self.speechRecognitionHelper.startSession()
-                    self.btnStartStopRecord.setTitle(Constant.stopRecording, for: .normal)
-                    self.lblTranscript.text = Constant.startSpeaking
+                    self.updateView(true)
                 } catch {
                     print("error starting new session")
                 }
             }
         } else {
             speechRecognitionHelper.cancelRecording()
-            btnStartStopRecord.setTitle(Constant.startRecording, for: .normal)
+            updateView()
         }
-        self.startRecording = !startRecording
+        startRecording = !startRecording
+    }
+    
+    private func updateView(_ isSessionStarted: Bool = false) {
+        self.btnStartStopRecord.setTitle(isSessionStarted ? Constant.stopRecording : Constant.startRecording, for: .normal)
+        self.lblTranscript.text = isSessionStarted ? Constant.startSpeaking : Constant.startSession
     }
 }
 
@@ -89,7 +106,10 @@ extension ViewController: SpeechRegognitionDelegate {
     
     func speechRecognizing(text: String) {
         let str = AudioUserDefault.sharedInstance.transcriptString
-        if let str, str != R.string.localizable.emptyString(), routeChange == true {
+        if !text.isEmpty {
+            isTextEmpty = false
+        }
+        if let str, routeChange == true {
             print("str:: \(str) text:: \(text) label:: \(String(describing: lblTranscript.text))")
             lblTranscript.text = isSessionStarted ? R.string.localizable.transcriptString(str, text) : str
         } else if startRecording {
