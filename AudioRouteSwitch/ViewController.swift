@@ -106,15 +106,13 @@ extension ViewController: SpeechRegognitionDelegate {
     
     func speechRecognizing(text: String) {
         let str = AudioUserDefault.sharedInstance.transcriptString
-        if !text.isEmpty {
-            isTextEmpty = false
-        }
         if let str, routeChange == true {
             print("str:: \(str) text:: \(text) label:: \(String(describing: lblTranscript.text))")
             lblTranscript.text = isSessionStarted ? R.string.localizable.transcriptString(str, text) : str
         } else if startRecording {
             lblTranscript.text = Constant.startSession
         } else if !text.isEmpty {
+            isTextEmpty = false
             print("lblTransctipt:: \(String(describing:lblTranscript.text)) texts:: \(text))")
             lblTranscript.text = text
         }

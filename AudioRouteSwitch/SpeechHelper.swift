@@ -70,7 +70,9 @@ class SpeechRegognitionHelper {
                     return nil
                 }
             }
-            let convertedBuffer = AVAudioPCMBuffer(pcmFormat: outputFormat, frameCapacity: AVAudioFrameCount(outputFormat.sampleRate) * buffer.frameLength / AVAudioFrameCount(buffer.format.sampleRate))!
+            let outputSampleRate = AVAudioFrameCount(outputFormat.sampleRate)
+            let bufferSampleRate = AVAudioFrameCount(buffer.format.sampleRate)
+            let convertedBuffer = AVAudioPCMBuffer(pcmFormat: outputFormat, frameCapacity: outputSampleRate * buffer.frameLength / bufferSampleRate)!
             var error: NSError?
             let status = converter.convert(to: convertedBuffer, error: &error, withInputFrom: inputCallback)
             if status == .error {
